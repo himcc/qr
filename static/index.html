@@ -1,0 +1,31 @@
+<center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+text to qr-image
+<br>
+<br>
+<br>
+<br>
+<input id="tt" type="text" name="tt"  onkeydown="keydown()" /> <input type="button" id="button1" onclick="ss()" value="QR-image">
+<br>
+<br>
+<br>
+<div id="omg"></div>
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+function keydown()
+{
+	var code=window.event.keyCode;
+	if(code==13)
+		ss();
+}
+var ss = function(){
+	document.getElementById("omg").innerHTML="<img src=\"qrimage.png?text="+encodeURIComponent($("#tt").val())+"\">"
+}
+</script>
+</center>
